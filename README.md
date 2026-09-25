@@ -20,6 +20,57 @@ A PostgreSQL project for managing books, authors, and library patrons. It demons
 - pgAdmin 4 or `psql`
 - SQL
 
+## Installation
+
+### Windows
+
+1. Open the [official PostgreSQL Windows download page](https://www.postgresql.org/download/windows/).
+2. Download and run the Windows installer.
+3. Keep these components selected:
+   - PostgreSQL Server
+   - pgAdmin 4
+   - Command Line Tools
+4. Create and remember a password for the `postgres` user.
+5. Keep the default port `5432`.
+6. Complete the installation. Stack Builder is not required for this project.
+
+### macOS
+
+1. Open the [official PostgreSQL macOS download page](https://www.postgresql.org/download/macosx/).
+2. Install PostgreSQL using the interactive installer or Homebrew.
+3. Install pgAdmin if you want to use a graphical interface.
+4. Confirm that the PostgreSQL server is running.
+
+### Linux
+
+1. Open the [official PostgreSQL Linux download page](https://www.postgresql.org/download/linux/).
+2. Select your Linux distribution and follow its installation instructions.
+3. Install pgAdmin or use the `psql` command-line tool.
+4. Confirm that the PostgreSQL service is running.
+
+### Connect pgAdmin to PostgreSQL
+
+1. Open pgAdmin 4.
+2. Select **Add New Server**.
+3. Enter `PostgreSQL` as the server name.
+4. Open the **Connection** tab and enter:
+
+```text
+Host name/address: 127.0.0.1
+Port: 5432
+Maintenance database: postgres
+Username: postgres
+Password: the password created during installation
+```
+
+5. Click **Save**.
+
+To check a command-line installation, run:
+
+```bash
+psql --version
+```
+
 ## Project Structure
 
 ```text
